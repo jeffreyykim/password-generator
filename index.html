@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Password Generator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="generate">Generate a</h1>
+        <span class="green">random password</span>
+
+        <h3>Never use an insecure password again.</h3>
+    </header>
+    <main>
+        <div class="controls">
+            <div class="length-control">
+                <label for="passwordLength">Password Length:</label>
+                <input type="range" id="passwordLength" min="4" max="15" value="8">
+                <span id="lengthValue">8</span>
+            </div>
+            
+            <div class="toggles">
+                <div class="toggle-item">
+                    <input type="checkbox" id="includeSymbols" checked>
+                    <label for="includeSymbols">Include Symbols</label>
+                </div>
+                <div class="toggle-item">
+                    <input type="checkbox" id="includeNumbers" checked>
+                    <label for="includeNumbers">Include Numbers</label>
+                </div>
+            </div>
+        </div>
+        
+        <button onClick="generatePassword()">Generate Passwords</button>
+        <div class="line"></div>
+        <div class="passwordsContainer">
+            <div class="passwords" id="passwordOne">
+                <span class="password-text" id="passwordText1"></span>
+                <span class="copy-overlay" id="copyOverlay1">Copied!</span>
+            </div>
+            <div class="passwords" id="passwordTwo">
+                <span class="password-text" id="passwordText2"></span>
+                <span class="copy-overlay" id="copyOverlay2">Copied!</span>
+            </div>
+        </div>
+    </main>
+    <script src="scripts.js"></script>
+</body>
+
+</html>

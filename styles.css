@@ -1,0 +1,226 @@
+* {
+    padding: 0px;
+    margin: 0px;
+}
+
+body {
+
+    background: #1F2937;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 200px;
+
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.generate {
+    color: var(--white, #FFF);
+    font-family: Karla;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+
+.green {
+    color: #4ADF86;
+    font-family: Karla;
+    font-size: 70px;
+    font-style: normal;
+    font-weight: 800;
+    line-height: 40px;
+    letter-spacing: -1px;
+}
+
+h3 {
+    color: var(--Medium-grey, #D5D4D8);
+    font-family: Inter;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 28px;
+    margin-top: 30px;
+}
+
+button {
+    color: var(--white, #FFF);
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px;
+    display: flex;
+    padding: 9px 17px 9px 15px;
+    justify-content: flex-start;
+    align-items: center;
+    align-self: flex-start;
+    gap: 12px;
+    border-radius: 6px;
+    background: #10B981;
+    box-shadow: 0px 0px 2px 0px rgba(0, 0, 0, 0.05);
+    border: none;
+    outline: none;
+    margin-top: 50px;
+}
+
+.line {
+    width: 800px;
+    height: 1px;
+    background: #2F3E53;
+    margin-top: 50px;
+}
+
+.passwordsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 50px;
+}
+
+.passwords {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    background: #273549;
+    color: #55F991;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+    width: 350px;
+    height: 70px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    position: relative;
+}
+
+.passwords:hover {
+    background: #334155;
+    transform: translateY(-2px);
+}
+
+.passwords:active {
+    transform: translateY(0px);
+}
+
+.copy-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #4ADF86;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 24px;
+    font-weight: 600;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+    z-index: 2;
+}
+
+.copy-overlay.show {
+    opacity: 1;
+}
+
+.password-text {
+    z-index: 1;
+    position: relative;
+}
+
+.controls {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.length-control {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.length-control label {
+    color: #D5D4D8;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.length-control input[type="range"] {
+    width: 200px;
+    height: 8px;
+    border-radius: 5px;
+    background: #2F3E53;
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.length-control input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #10B981;
+    cursor: pointer;
+}
+
+.length-control input[type="range"]::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #10B981;
+    cursor: pointer;
+    border: none;
+}
+
+#lengthValue {
+    color: #4ADF86;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 600;
+    min-width: 20px;
+}
+
+.toggles {
+    display: flex;
+    gap: 30px;
+}
+
+.toggle-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.toggle-item input[type="checkbox"] {
+    width: 18px;
+    height: 18px;
+    accent-color: #10B981;
+    cursor: pointer;
+}
+
+.toggle-item label {
+    color: #D5D4D8;
+    font-family: Inter;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+}
